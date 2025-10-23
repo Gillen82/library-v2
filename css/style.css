@@ -1,0 +1,159 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+	font-weight: 400;
+	font-family: 'Lexend Peta';
+	text-rendering: optimizeLegibility;
+	/* site colours */
+	--book-green: #0b4623;
+	--book-blue: #454d94;
+	--bluish-white: #bfe6eb;
+	--warm-grey: #e9dfdf;
+	--just-white: #fff;
+	--warning-red: #dd2247;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--warm-grey);
+}
+
+/* book form section */
+.book-form {
+	width: 30%;
+	height: 100vh;
+	padding: 50px;
+	text-align: center;
+	background-color: #fff;
+	position: fixed;
+	background: url('../imgs/books-wallpaper.jpg') center center no-repeat;
+	background-size: cover;
+	border-right: 4px solid var(--book-blue);
+}
+
+.book-form h1 {
+	margin-bottom: 50px;
+	color: var(--book-green);
+}
+
+.book-form form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.book-form form input {
+	width: 100%;
+	padding: 16px 12px;
+	font-size: 2rem;
+	border: 1px solid var(--book-green);
+	color: var(--book-green);
+}
+
+.book-form form input:focus {
+	outline: none;
+	border: 1px solid var(--book-blue);
+	background-color: var(--bluish-white);
+	color: var(--book-green);
+}
+
+.book-form form button {
+	width: 50%;
+	padding: 16px 12px;
+	background-color: var(--book-green);
+	color: var(--warm-grey);
+	border: none;
+	text-transform: uppercase;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+/* library section */
+.library {
+	position: relative;
+	width: 70%;
+	left: 30%;
+	padding: 50px;
+}
+
+.books {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-top: 50px;
+}
+
+.book-card {
+	padding: 20px;
+	background-color: var(--just-white);
+	border-radius: 10px;
+}
+
+.book-card h2 {
+	color: var(--book-green);
+	margin-bottom: 10px;
+}
+
+.book-card p {
+	color: var(--book-blue);
+	font-size: 1.2rem;
+}
+
+.book-card p:first-of-type {
+	margin-bottom: 50px;
+}
+
+.book-card .book-controls {
+	margin-top: 20px;
+	display: flex;
+	gap: 12px;
+}
+
+.book-card .book-controls button {
+	text-transform: capitalize;
+	padding: 12px;
+	width: 50%;
+	border: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.change-status {
+	background-color: var(--book-green);
+	color: var(--warm-grey);
+}
+
+.remove-book {
+	background-color: var(--warning-red);
+	color: var(--just-white);
+}
+/* all buttons */
+button:hover {
+	filter: brightness(1.3);
+}
+
+.been-read {
+	border: 2px solid var(--book-green);
+}
+
+.not-read {
+	border: 2px solid var(--warning-red);
+}
+
+.message-card {
+	margin-top: 50px;
+	padding: 20px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	background-color: var(--just-white);
+}
+
+.hidden {
+	display: none;
+}

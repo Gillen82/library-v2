@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Odin Project | Library</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="book-form">
+                <h1>Add New Book</h1>
+                <form>
+                    <input class="input-title" type="text" placeholder="Book Title..." />
+                    <input class="input-author" type="text" placeholder="Author..." />
+                    <input class="input-pages" type="number" placeholder="Number of Pages..." />
+                    <button class="add-book" type="button">Add Book</button>
+                    <div class="message-card hidden">
+                        <p>Please complete all form fields!</p>
+                    </div>
+                </form>
+            </div>
+            <div class="library">
+                <h1>Book Collection</h1>
+                <div class="books">
+                    <!-- books will go here -->
+                </div>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
