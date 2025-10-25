@@ -9,7 +9,6 @@ class Library {
         let inputAuthor = document.querySelector('.input-author');
         let inputPages = document.querySelector('.input-pages');
         // check all fields entered
-        console.log(typeof inputPages.value )
         if (inputTitle.value && inputAuthor.value && Number(inputPages.value)>0) {
             library.createBook(inputTitle.value, inputAuthor.value, inputPages.value);
             inputTitle.value = '';
