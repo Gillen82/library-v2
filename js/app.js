@@ -9,12 +9,16 @@ class Library {
         let inputAuthor = document.querySelector('.input-author');
         let inputPages = document.querySelector('.input-pages');
         // check all fields entered
-        if (inputTitle.value && inputAuthor.value && inputPages.value) {
+        if (inputTitle.value && inputAuthor.value && Number(inputPages.value)>0) {
             library.createBook(inputTitle.value, inputAuthor.value, inputPages.value);
             inputTitle.value = '';
             inputAuthor.value = '';
             inputPages.value = '';
         } else {
+            messageEl.querySelector('p').textContent = Number(inputPages.value)<0
+                ? "Number of pages have to be greater than zero"
+                :'Please complete all form fields!'
+            ;
             messageEl.classList.remove('hidden');
             setTimeout(() => {
                 messageEl.classList.add('hidden');
